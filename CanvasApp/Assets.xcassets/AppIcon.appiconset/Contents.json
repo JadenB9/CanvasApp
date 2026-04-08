@@ -1,0 +1,38 @@
+{
+  "images" : [
+    {
+      "filename" : "180 by 180 back background letter C that is white, sort of a bubble letter but also very clean and classy design.png",
+      "idiom" : "universal",
+      "platform" : "ios",
+      "size" : "1024x1024"
+    },
+    {
+      "appearances" : [
+        {
+          "appearance" : "luminosity",
+          "value" : "dark"
+        }
+      ],
+      "filename" : "a bubble-letter C made up of many bubbles with a white front and a dark grey background to match Apples dark mode.png",
+      "idiom" : "universal",
+      "platform" : "ios",
+      "size" : "1024x1024"
+    },
+    {
+      "appearances" : [
+        {
+          "appearance" : "luminosity",
+          "value" : "tinted"
+        }
+      ],
+      "filename" : "180 by 180 back background letter C that is white, sort of a bubble letter but also very clean and classy design 2.png",
+      "idiom" : "universal",
+      "platform" : "ios",
+      "size" : "1024x1024"
+    }
+  ],
+  "info" : {
+    "author" : "xcode",
+    "version" : 1
+  }
+}
