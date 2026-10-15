@@ -27,7 +27,6 @@ struct CanvasApp: App {
                         .environmentObject(authManager)
                 }
             }
-            .preferredColorScheme(.dark)
         }
     }
 }
