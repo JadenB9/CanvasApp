@@ -1,2 +1,17 @@
 .DS_Store
-node_modules/
+
+# Xcode
+xcuserdata/
+*.xcuserstate
+DerivedData/
+build/
+*.xccheckout
+*.moved-aside
+*.hmap
+*.ipa
+*.dSYM
+*.dSYM.zip
+
+# SPM
+.swiftpm/
+.build/
