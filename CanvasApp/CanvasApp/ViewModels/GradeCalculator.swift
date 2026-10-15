@@ -213,8 +213,6 @@ class GradeCalculator: ObservableObject {
             }
         }
 
-        let currentGrade = totalWeight > 0 ? (fixedContribution / totalWeight) * 100 : 0
-
         // Add contribution from partially completed groups
         var currentContributionFromVariable: Double = 0
         for (_, weight, earned, total, _, _) in groupsWithUncompleted {

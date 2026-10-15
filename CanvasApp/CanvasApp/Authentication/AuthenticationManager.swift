@@ -11,7 +11,7 @@ class AuthenticationManager: ObservableObject {
     
     private lazy var apiClient: CanvasAPIClient = {
         CanvasAPIClient(
-            baseURL: "https://cedarville.instructure.com",
+            baseURL: canvasBaseURL,
             token: keychain.retrieveToken() ?? ""
         )
     }()
@@ -38,13 +38,13 @@ class AuthenticationManager: ObservableObject {
             return
         }
         
-        print("🔑 Starting login with token: \(String(token.prefix(5)))...")
+        print("🔑 Starting login...")
         isLoading = true
         
         Task {
             do {
                 let tempClient = CanvasAPIClient(
-                    baseURL: "https://cedarville.instructure.com",
+                    baseURL: canvasBaseURL,
                     token: token
                 )
                 

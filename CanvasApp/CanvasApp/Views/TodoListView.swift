@@ -334,7 +334,7 @@ struct TodoCard: View {
             Spacer()
 
             // Add to Calendar Button
-            if !isCompleted, let dueAt = assignment.dueAt {
+            if !isCompleted, assignment.dueAt != nil {
                 Button {
                     addToCalendar()
                 } label: {

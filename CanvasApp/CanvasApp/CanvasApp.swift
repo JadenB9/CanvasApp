@@ -1,5 +1,8 @@
 import SwiftUI
 
+// change this if you go to a different school
+let canvasBaseURL = "https://cedarville.instructure.com"
+
 @main
 struct CanvasApp: App {
     @StateObject private var authManager = AuthenticationManager()
@@ -13,7 +16,7 @@ struct CanvasApp: App {
                     ContentView(
                         viewModel: CourseViewModel(
                             apiClient: CanvasAPIClient(
-                                baseURL: "https://cedarville.instructure.com",
+                                baseURL: canvasBaseURL,
                                 token: authManager.getCurrentToken() ?? ""
                             )
                         )
