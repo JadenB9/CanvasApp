@@ -27,16 +27,27 @@ the API and then stored in the iOS Keychain — it never leaves the device.
 After that the app pulls courses, assignments, and grades straight from the
 Canvas REST API.
 
-The base URL is currently hardcoded to `cedarville.instructure.com`, so if you
-go to a different school you'd need to change one line in `CanvasApp.swift`
-and `AuthenticationManager.swift`.
+The base URL is hardcoded to `cedarville.instructure.com`. If you go to a
+different school, change the `canvasBaseURL` constant at the top of
+`CanvasApp.swift`.
 
 ## Running it
 
-1. Open `CanvasApp/CanvasApp.xcodeproj` in Xcode
+1. Open `CanvasApp/CanvasApp.xcodeproj` in Xcode 16 or newer (it targets iOS 18.2)
 2. Pick a simulator or your phone
 3. Cmd + R
 4. Paste in a Canvas access token when it asks
+
+The UI follows the system light/dark setting, and the app icon has light,
+dark and tinted variants. The test targets are still the Xcode stubs.
+
+To build from the command line without signing:
+
+```bash
+cd CanvasApp
+xcodebuild -scheme CanvasApp -destination 'generic/platform=iOS Simulator' \
+  CODE_SIGNING_ALLOWED=NO build
+```
 
 ## Project layout
 
@@ -47,4 +58,7 @@ CanvasApp/
   Services/         Canvas REST API client
   ViewModels/       CourseViewModel, GradeCalculator
   Views/            course cards, grade breakdown, to-do list
+  Assets.xcassets/  app icon (light / dark / tinted)
 ```
+
+Personal project, not coursework. MIT licensed.
